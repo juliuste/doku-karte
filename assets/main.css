@@ -1,0 +1,151 @@
+/* former RESET.css */
+
+h1, div, nav, body{
+	margin: 0;
+	padding: 0;
+}
+p:active,a:active,div:active,p:focus,a:focus,div:focus{
+	outline-style: none;
+	outline: none;
+}
+a{
+	text-decoration: none;
+}
+
+/* former MAIN.css */
+
+body{
+	display: flex;
+	padding: 7.5vh;
+	align-items: center;
+	background: #0272B8/*rgb(165, 191, 221)*/;
+	color: #db0000;
+	font-size: 100%;
+	font-family: Helvetica;
+	min-height: 85vh;
+	position: relative;
+}
+a,p{
+	color: #fff;
+}
+a:hover{
+	color: #ddd;
+}
+
+#page{
+	text-align: center;
+	width: 100%;
+}
+
+#title{
+	font-size: 450%;
+	font-weight: normal;
+	letter-spacing: -0.03em;
+	color: #fff/*rgb(165, 191, 221)*/;
+}
+
+#map{
+	margin: -5vh auto 0 auto;
+	width: 80%;
+	height: 80vh;
+}
+
+#itembox{
+	margin: 4vh auto 2em auto;
+	text-align: center;
+}
+
+.item{
+	padding: 0;
+	font-size: 115%;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+	margin: .5em;
+	line-height: 1.25em;
+	height: 25vh;
+	position: relative;
+	border: 1px solid #333;
+}
+
+.item>a{
+	text-align: center;
+}
+
+.item img{
+	display: block;
+	height: 100%;
+}
+
+.item a:hover{
+	opacity: 0.9;
+}
+
+.item span{
+	line-height: 1.4em;
+	padding-top: .2em;
+	width: 100%;
+	font-size: 1.05em;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(30,30,30,0.75);
+	color: #fff;
+}
+
+.link{
+	padding: 0 .2em;
+	display: block;
+}
+
+#back{
+	font-size: 1.3em;
+	color: #fff;
+}
+
+#back:hover{
+	color: #ccc;
+}
+
+#impressum{
+	width: 100%;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 1ex 0;
+	font-size: 125%;
+	background: rgba(3,51,81,0.4)/*rgba(240,240,240,0.4)*/;
+	text-align: center;
+}
+#impressum a{
+	color: #ddd;
+}
+#impressum a:hover{
+	color: #bbb;
+}
+
+@media screen and (min-width: 401px) and (max-width: 625px){
+	body{font-size: 10px;}
+}
+
+@media screen and (max-width: 400px) {
+	body {font-size: 14px;}
+	#title{font-size: 250%;}
+	#error{font-size: 125%;}
+	#form, .station, #submit{width: 90%; margin: 0; margin-top: .75ex;}
+	#form{padding: 0; width: 100%; margin-bottom: -2ex;}
+	#submit{width: 95%; margin-bottom: .75ex;}
+	#arrow{display: none}
+	#options{display: block; margin: 0;}
+	#options>div{
+		border-top: 1px solid #db0000;
+		padding: .5ex 0 .2ex 0;
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+	#options>div:first-of-type{
+		border-top: 2px solid #db0000;
+	}
+}

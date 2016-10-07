@@ -1,0 +1,57 @@
+{
+  "name": "doku-karte",
+  "description": "Documentaries from the german ARTE media library sorted by country and displayed on a map.",
+  "version": "0.1.0",
+  "keywords": [
+    "doku",
+    "documentary",
+    "documentaire",
+    "karte",
+    "map",
+    "arte",
+    "german",
+    "deutsch",
+    "französisch",
+    "francais",
+    "french",
+    "franco-allemand",
+    "world"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "params.js",
+    "route.js",
+    "map.js",
+    "country.js",
+    "assets/*"
+  ],
+  "author": "Julius Tens <mail@juliuste.de>",
+  "homepage": "https://doku-karte",
+  "repository": "juliuste/doku-karte",
+  "bugs": "https://github.com/juliuste/doku-karte/issues",
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "config": "^1.20.1",
+    "corser": "^2",
+    "express": "^4.14.0",
+    "express-force-ssl": "^0.3.2",
+    "js-beautify": "^1.6.4",
+    "nocache": "^1",
+    "pithy": "^0.0.4",
+    "spdy": "^3.3.3"
+  },
+  "peerDependencies": {
+    "forever": "^0.15"
+  },
+  "scripts": {
+    "start": "forever start --uid doku-karte -a index.js",
+    "stop": "forever stop doku-karte",
+    "ssh": "ssh dokukarte",
+    "deploy": "./deploy"
+  },
+  "license": "MIT"
+}
