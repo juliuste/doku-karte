@@ -17,7 +17,16 @@ const generate = () => {
 			html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/jqvmap.css'})
 		]),
 		html.body(null, [
-			map(),
+			html.div('#container', [
+				map(),
+				html.span('#description', [
+					'Auf dieser Karte sind Dokumentationen aus den Mediatheken von ',
+					html.a({id: 'arte', href: 'http://www.arte.tv/guide/de/plus7/?country=DE'}, 'arte'),
+					' und ',
+					html.a({id: 'dw', href: 'http://www.dw.com/de/media-center/alle-inhalte/s-100814'}, 'Deutsche Welle'),
+					' nach Ländern sortiert eingetragen.'
+				]),
+			]),
 			html.span('#impressum', [html.a({href: '/impressum'}, 'Impressum & Kontakt')]),
 			html.script({src: 'assets/jquery.js'}),
 			html.script({src: 'assets/jquery.vmap.js'}),

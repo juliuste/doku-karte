@@ -3,6 +3,7 @@
 rsync -rav --delete \
 	--exclude '.*' \
 	--exclude node_modules \
+	--exclude 'assets/data.json' \
 	. 'dokukarte:~/dokukarte/'
 
 ssh dokukarte "\

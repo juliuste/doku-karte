@@ -20,7 +20,8 @@ const generate = () => {
 			html.div('#page', [
 				html.h1('#title', 'Impressum & Kontakt'),
 				html.p(null, [html.a({href: 'mailto:dokukarte@juliuste.de'}, 'Julius Tens'), ', Schlickweg 10, 14129 Berlin.']),
-				html.p(null, ['Dieses Projekt ist ', html.a({href: 'https://github.com/juliuste/doku-karte/blob/master/LICENSE'}, 'MIT-Lizensiert'), '. Der Quellcode ist auf ', html.a({href: 'https://github.com/juliuste/doku-karte'}, 'GitHub'), ' verfügbar.'])
+				html.p(null, ['Dieses Projekt ist ', html.a({href: 'https://github.com/juliuste/doku-karte/blob/master/LICENSE'}, 'MIT-Lizensiert'), '. Der Quellcode ist auf ', html.a({href: 'https://github.com/juliuste/doku-karte'}, 'GitHub'), ' verfügbar.']),
+				html.p(null, 'Die Rechte an den verwendeten Vorschaubildern liegen ausschließlich bei den genannten Sendeanstalten.')
 			]),
 			html.span('#karte', [html.a({href: '/'}, 'Zurück zur Karte')])
 		])

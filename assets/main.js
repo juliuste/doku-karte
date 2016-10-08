@@ -26,23 +26,26 @@ function color(deg){
 }
 
 $(document).ready(function(){
-	$.getJSON('/assets/data.json', function(data){
-		count = countPerCountry(data)
-		$('#map').vectorMap({
-		map:'world_en',
-		enableZoom: false,
-		hoverColor: null,
-		hoverOpacity: 0.75,
-		selectedColor: null,
-		color: '#bbb',
-		backgroundColor: '#0272B8',
-		colors: generateColours(count),
-		onRegionClick: function(element, code, region){
-			if(code in count) window.location.href =  '/?country='+code;
-    	},
-    	onLabelShow: function(event, label, code){
-    		if(count[code]) label.append(' - '+count[code]+' Dokumentationen');
-    	}
-	});
+	$.getJSON('/assets/arte.json', function(arte){
+		$.getJSON('/assets/dw.json', function(dw){
+			data = arte.concat(dw)
+			count = countPerCountry(data)
+			$('#map').vectorMap({
+				map:'world_en',
+				enableZoom: false,
+				hoverColor: null,
+				hoverOpacity: 0.75,
+				selectedColor: null,
+				color: '#bbb',
+				backgroundColor: '#0272B8',
+				colors: generateColours(count),
+				onRegionClick: function(element, code, region){
+					if(code in count) window.location.href =  '/?country='+code;
+		    	},
+		    	onLabelShow: function(event, label, code){
+		    		if(count[code]) label.append(' - '+count[code]+' Dokumentationen');
+		    	}
+	   		})
+		})
 	})
 });

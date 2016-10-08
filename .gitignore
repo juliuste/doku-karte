@@ -9,4 +9,5 @@ npm-debug.log
 config/*
 !config/default.json
 
-assets/data.json
+assets/arte.json
+assets/dw.json

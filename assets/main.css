@@ -44,10 +44,35 @@ a:hover{
 	color: #fff/*rgb(165, 191, 221)*/;
 }
 
-#map{
+#container{
 	margin: -5vh auto 0 auto;
 	width: 80%;
+}
+
+#map{
+	width: 100%;
 	height: 80vh;
+}
+#description{
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	display: block;
+	margin-top: 2.5em;
+	font-size: 1.3em;
+}
+
+#arte{
+	color: #f84;
+}
+#arte:hover{
+	opacity: 0.8;
+}
+#dw{
+	color: #8cf;
+}
+#dw:hover{
+	opacity: 0.8;
 }
 
 #itembox{
@@ -65,7 +90,7 @@ a:hover{
 	line-height: 1.25em;
 	height: 25vh;
 	position: relative;
-	border: 1px solid #333;
+	border: 2px solid #333;
 }
 
 .item>a{

@@ -3,8 +3,12 @@
 const html = require('pithy')
 const beautify = require('js-beautify').html
 
-const data = require('./assets/data.json')
+const arte = require('./assets/arte.json')
+const dw = require('./assets/dw.json')
+
 const countries = require('./assets/countries.json')
+
+const data = arte.concat(dw)
 
 const extractCountry = (iso) => {
 	const res = []
@@ -17,9 +21,9 @@ const extractCountry = (iso) => {
 }
 
 const generateTile = (item) => {
-	return html.div('.item', [
-		html.a({href: item.link, title: item.title, target: '_blank'}, [
-			html.img({src: item.image, title: item.title}),
+	return html.div({class: 'item '+item.network}, [
+		html.a({href: item.link, target: '_blank'}, [
+			html.img({src: item.image, alt: item.title}),
 			html.span('#link', item.title)
 		])
 	])
