@@ -1,7 +1,7 @@
 {
   "name": "doku-karte",
   "description": "Documentaries from the german ARTE and Deutsche Welle media libraries sorted by country and displayed on a map.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "keywords": [
     "doku",
     "documentary",
@@ -25,6 +25,7 @@
     "route.js",
     "map.js",
     "country.js",
+    "update.js",
     "assets/*"
   ],
   "author": "Julius Tens <mail@juliuste.de>",
@@ -44,8 +45,7 @@
     "nocache": "^1",
     "pithy": "^0.0.4",
     "spdy": "^3.3.3",
-    "doku-tagger": "juliuste/doku-tagger",
-    "dw-dokus": "juliuste/dw-dokus"
+    "doku-tagger": "^0.2.0"
   },
   "peerDependencies": {
     "forever": "^0.15"

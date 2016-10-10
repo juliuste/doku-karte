@@ -3,12 +3,8 @@
 const html = require('pithy')
 const beautify = require('js-beautify').html
 
-const arte = require('./assets/arte.json')
-const dw = require('./assets/dw.json')
-
+const data = require('./assets/data.json')
 const countries = require('./assets/countries.json')
-
-const data = arte.concat(dw)
 
 const extractCountry = (iso) => {
 	const res = []

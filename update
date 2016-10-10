@@ -1,7 +1,6 @@
 #!/bin/sh
 cd ~/dokukarte
 forever stop doku-karte
-node ./node_modules/doku-tagger/index>./assets/arte.json
-node ./node_modules/dw-dokus/index>./assets/dw.json
+node update.js>./assets/data.json
 export NODE_ENV=production
 forever start -a --uid doku-karte index.js
