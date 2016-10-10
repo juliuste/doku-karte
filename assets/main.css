@@ -61,18 +61,18 @@ a:hover{
 	margin-top: 2.5em;
 	font-size: 1.3em;
 }
+#description a:hover{
+	opacity: 0.8;
+}
 
 #arte{
 	color: #f84;
 }
-#arte:hover{
-	opacity: 0.8;
+#swr, #mdr{
+	color: #e00;
 }
 #dw{
 	color: #8cf;
-}
-#dw:hover{
-	opacity: 0.8;
 }
 
 #itembox{

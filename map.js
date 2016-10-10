@@ -22,6 +22,10 @@ const generate = () => {
 				html.span('#description', [
 					'Auf dieser Karte sind Dokumentationen aus den Mediatheken von ',
 					html.a({id: 'arte', href: 'http://www.arte.tv/guide/de/plus7/?country=DE'}, 'arte'),
+					', ',
+					html.a({id: 'mdr', href: 'http://www.mdr.de/mediathek/'}, 'MDR'),
+					', ',
+					html.a({id: 'swr', href: 'http://swrmediathek.de'}, 'SWR'),
 					' und ',
 					html.a({id: 'dw', href: 'http://www.dw.com/de/media-center/alle-inhalte/s-100814'}, 'Deutsche Welle'),
 					' nach Ländern sortiert eingetragen.'
