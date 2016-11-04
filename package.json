@@ -41,13 +41,16 @@
     "compression": "^1.6.2",
     "config": "^1.20.1",
     "corser": "^2",
+    "doku-tagger": "^0.6.2",
     "express": "^4.14.0",
     "express-force-ssl": "^0.3.2",
     "js-beautify": "^1.6.4",
     "nocache": "^1",
     "pithy": "^0.0.4",
     "spdy": "^3.3.3",
-    "doku-tagger": "^0.4.0"
+    "virtual-dom": "^2.1.1",
+    "virtual-dom-stringify": "^3.0.1",
+    "virtual-hyperscript-svg": "^2.0.0"
   },
   "peerDependencies": {
     "forever": "^0.15"

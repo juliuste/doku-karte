@@ -26,7 +26,7 @@ const generateTile = (item) => {
 }
 
 const generateTiles = (list) => {
-	return html.div('#itembox', list.map(generateTile).concat([html.br(), html.br(), html.a({id: 'back', href: '/'}, '← Zurück zur Karte ←')]))
+	return html.div('#itembox', list.map(generateTile).concat([html.br(), html.br(), html.a({id: 'back', href: '/'}/*, 'Zurück zur Karte'*/)]))
 }
 
 const generate = (country) => {
@@ -35,6 +35,7 @@ const generate = (country) => {
 			html.meta({charset: 'utf-8'}),
 			html.meta({name: 'viewport', content: "width=device-width, initial-scale=1.0, user-scalable=no"}),
 			html.title(null, 'Doku-Karte'),
+			html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/general.css'}),
 			html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/main.css'})
 		]),
 		html.body(null, [
@@ -42,7 +43,7 @@ const generate = (country) => {
 				html.h1('#title', countries[country.toUpperCase()]),
 				generateTiles(extractCountry(country))
 			]),
-			html.span('#impressum', [html.a({href: '/impressum'}, 'Impressum & Kontakt')]),
+			html.span('#footer', [html.a({href: '/impressum'}, 'Impressum & Kontakt')]),
 			/*html.script({src: 'assets/jquery.js'}),
 			html.script({src: 'assets/main.js'})*/
 		])

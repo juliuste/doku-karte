@@ -8,7 +8,8 @@ const head = () => {
 		html.meta({charset: 'utf-8'}),
 		html.meta({name: 'viewport', content: "width=device-width, initial-scale=1.0, user-scalable=no"}),
 		html.title(null, 'Impressum & Kontakt | Doku-Karte'),
-		html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/impressum.css'}),
+		html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/general.css'}),
+		html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/impressum.css'})
 	]
 	return html.head(null, elements)
 }
@@ -23,7 +24,7 @@ const generate = () => {
 				html.p(null, ['Dieses Projekt ist ', html.a({href: 'https://github.com/juliuste/doku-karte/blob/master/LICENSE'}, 'MIT-Lizensiert'), '. Der Quellcode ist auf ', html.a({href: 'https://github.com/juliuste/doku-karte'}, 'GitHub'), ' verfügbar.']),
 				html.p(null, 'Die Rechte an den verwendeten Vorschaubildern liegen ausschließlich bei den genannten Sendeanstalten.')
 			]),
-			html.span('#karte', [html.a({href: '/'}, 'Zurück zur Karte')])
+			html.span('#footer', [html.a({href: '/'}, 'Zurück zur Karte')])
 		])
 	])
 	return beautify(document)
