@@ -58,6 +58,8 @@ const generate = () => {
 					'Dokumentationen aus den Mediatheken von ',
 					html('a', {id: 'arte', href: 'http://www.arte.tv/guide/de/plus7/?country=DE'}, 'arte'),
 					', ',
+					html('a', {id: 'daserste', href: 'http://mediathek.daserste.de/'}, 'Das Erste'),
+					', ',
 					html('a', {id: 'mdr', href: 'http://www.mdr.de/mediathek/'}, 'mdr'),
 					', ',
 					html('a', {id: 'rbb', href: 'http://mediathek.rbb-online.de/tv'}, 'rbb'),
