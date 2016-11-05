@@ -3,7 +3,12 @@
 const html = require('pithy')
 const beautify = require('js-beautify').html
 
-const data = require('./assets/data.json')
+const fs = require('fs')
+const ndjson = require('ndjson')
+const data = []
+fs.createReadStream('./assets/data.ndjson')
+.pipe(ndjson.parse())
+.on('data', (d) => {data.push(d)})
 const countries = require('./assets/countries.json')
 
 const extractCountry = (iso) => {

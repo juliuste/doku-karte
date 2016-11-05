@@ -5,7 +5,12 @@ const stringify = require('virtual-dom-stringify')
 const beautify = require('js-beautify').html
 
 const world = require('./map/index')
-const data = require('./assets/data.json')
+const fs = require('fs')
+const ndjson = require('ndjson')
+const data = []
+fs.createReadStream('./assets/data.ndjson')
+.pipe(ndjson.parse())
+.on('data', (d) => {data.push(d)})
 
 function color(deg){
 	if(deg>=10) return '#0d0'

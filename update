@@ -1,6 +1,6 @@
 #!/bin/sh
 cd ~/dokukarte
-node update.js>./assets/data.json
+node update.js
 forever stop doku-karte
 export NODE_ENV=production
 forever start -a --uid doku-karte index.js
