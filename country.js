@@ -23,7 +23,7 @@ const extractCountry = (iso) => {
 
 const generateTile = (item) => {
 	return html.div({class: 'item '+item.network}, [
-		html.a({href: item.link, target: '_blank'}, [
+		html.a({href: item.link}, [
 			html.img({src: item.image || '/assets/default.png', alt: item.title}),
 			html.span('#link', item.title)
 		])

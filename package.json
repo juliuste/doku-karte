@@ -1,7 +1,7 @@
 {
   "name": "doku-karte",
   "description": "Documentaries from the german ARTE, MDR, SWR and Deutsche Welle media libraries sorted by country and displayed on a map.",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "keywords": [
     "doku",
     "documentary",
