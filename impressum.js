@@ -8,6 +8,7 @@ const head = () => {
 		html.meta({charset: 'utf-8'}),
 		html.meta({name: 'viewport', content: "width=device-width, initial-scale=1.0, user-scalable=no"}),
 		html.title(null, 'Impressum & Kontakt | Doku-Karte'),
+		html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/reset.css'}),
 		html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/general.css'}),
 		html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/impressum.css'})
 	]

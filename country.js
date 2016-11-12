@@ -3,6 +3,15 @@
 const html = require('pithy')
 const beautify = require('js-beautify').html
 
+const networks = {
+	arte: 'ARTE',
+	daserste: 'Das Erste',
+	swr: 'SWR',
+	mdr: 'MDR',
+	dw: 'Deutsche Welle',
+	rbb: 'RBB'
+}
+
 const fs = require('fs')
 const ndjson = require('ndjson')
 const data = []
@@ -23,16 +32,18 @@ const extractCountry = (iso) => {
 
 const generateTile = (item) => {
 	return html.div({class: 'item '+item.network}, [
-		html.a({href: item.link}, [
-			html.img({src: item.image || '/assets/default.png', alt: item.title}),
-			html.span('#link', item.title)
+		html.div('.img', [html.a({href: item.link}, [html.img({src: item.image || '/assets/default.png', alt: item.title})])]),
+		html.div('.text', [
+			html.h2(null, [html.a({href: item.link}, item.title)]),
+			html.p(null, [
+				html.span({class: item.network}, networks[item.network]||'ARD/ZDF'),
+				'. ',
+				item.description
+			])
 		])
 	])
 }
-
-const generateTiles = (list) => {
-	return html.div('#itembox', list.map(generateTile).concat([html.br(), html.br(), html.a({id: 'back', href: '/'}/*, 'Zurück zur Karte'*/)]))
-}
+const generateTiles = (list) => list.map(generateTile)
 
 const generate = (country) => {
 	let document = '<!doctype html>' + html.html(null, [
@@ -40,13 +51,14 @@ const generate = (country) => {
 			html.meta({charset: 'utf-8'}),
 			html.meta({name: 'viewport', content: "width=device-width, initial-scale=1.0, user-scalable=no"}),
 			html.title(null, 'Doku-Karte'),
+			html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/reset.css'}),
 			html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/general.css'}),
-			html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/main.css'})
+			html.link({rel: 'stylesheet', type: 'text/css', href: 'assets/country.css'})
 		]),
 		html.body(null, [
 			html.div('#page', [
 				html.h1('#title', countries[country.toUpperCase()]),
-				generateTiles(extractCountry(country))
+				html.div('#items', generateTiles(extractCountry(country)))
 			]),
 			html.span('#footer', [html.a({href: '/impressum'}, 'Impressum & Kontakt')]),
 			/*html.script({src: 'assets/jquery.js'}),

@@ -1,46 +1,53 @@
-h1, div, nav, body{
-	margin: 0;
-	padding: 0;
-}
-p:active,a:active,div:active,p:focus,a:focus,div:focus{
-	outline-style: none;
-	outline: none;
-}
-a{
-	text-decoration: none;
-}
-
-/* former MAIN.css */
-
 body{
+	background: #0272B8;
 	display: flex;
 	align-items: center;
-	background: #0272B8/*rgb(165, 191, 221)*/;
-	color: #db0000;
+	color: #fff;
 	font-size: 100%;
 	font-family: Helvetica;
+	padding: 0;
 	min-height: 100vh;
 	position: relative;
 }
-a,p{
+a, p{
+	font-weight: lighter;
+}
+p{
+	margin-top: 1.2em;
+	margin-bottom: 0;
+}
+h1, h2{
 	color: #fff;
+	margin: 0;
+	font-weight: lighter;
+}
+h1{
+	font-size: 325%;
 }
 a:hover{
-	color: #ddd;
+	opacity: 0.8;
 }
 
-#title{
-	font-size: 450%;
-	font-weight: normal;
-	letter-spacing: -0.03em;
-	color: #fff/*rgb(165, 191, 221)*/;
+.arte{
+	color: #f84 !important;
+}
+.swr, .mdr, .rbb{
+	color: #e00 !important;
+}
+.dw{
+	color: #8cf !important;
+}
+.daserste{
+	color: #8cf !important;
 }
 
 #page{
-	text-align: center;
-	display: block;
 	width: 100%;
-	margin: 4em 2em 5em 2em;
+	display: block;
+	padding: 2.5em 1em;
+	font-size: 1.3em;
+	text-align: center;
+	margin-bottom: 2em;
 }
 
 #footer{
@@ -57,6 +64,8 @@ a:hover{
 #footer a{
 	color: #ddd;
 }
-#footer a:hover{
-	color: #bbb;
+
+#title{
+	letter-spacing: -0.03em;
+	color: #fff;
 }

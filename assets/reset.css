@@ -1,0 +1,13 @@
+h1, div, nav, body{
+	margin: 0;
+	padding: 0;
+}
+p:active,a:active,div:active,p:focus,a:focus,div:focus, a:visited{
+	outline-style: none;
+	outline: none;
+	color: #fff;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
