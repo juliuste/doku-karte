@@ -10,4 +10,6 @@ ssh dokukarte "\
 cd ~/dokukarte
 npm i
 npm update
-./update &"
+forever stop doku-karte
+export NODE_ENV=production
+forever start -a --uid doku-karte index.js &"
