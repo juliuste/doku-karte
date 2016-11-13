@@ -5,9 +5,7 @@ h1, div, nav, body{
 p:active,a:active,div:active,p:focus,a:focus,div:focus, a:visited{
 	outline-style: none;
 	outline: none;
-	color: #fff;
 }
 a{
 	text-decoration: none;
-	color: #fff;
 }

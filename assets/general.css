@@ -24,6 +24,9 @@ h1, h2{
 h1{
 	font-size: 325%;
 }
+a{
+	color: #fff;
+}
 a:hover{
 	opacity: 0.8;
 }
