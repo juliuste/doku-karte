@@ -8,8 +8,7 @@ const networks = {
 	daserste: 'Das Erste',
 	swr: 'SWR',
 	mdr: 'MDR',
-	dw: 'Deutsche Welle',
-	rbb: 'RBB'
+	dw: 'Deutsche Welle'
 }
 
 const fs = require('fs')
@@ -58,7 +57,7 @@ const generate = (country) => {
 		html.body(null, [
 			html.div('#page', [
 				html.h1('#title', countries[country.toUpperCase()]),
-				html.div('#items', generateTiles(extractCountry(country)))
+				html.div('#items', generateTiles(extractCountry(country.toUpperCase())))
 			]),
 			html.span('#footer', [html.a({href: '/impressum'}, 'Impressum & Kontakt')]),
 			/*html.script({src: 'assets/jquery.js'}),
