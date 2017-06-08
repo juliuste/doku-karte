@@ -67,6 +67,8 @@ const generate = () => {
 					', ',
 					html('a', {class: 'mdr', href: 'http://www.mdr.de/mediathek/'}, 'mdr'),
 					', ',
+					html('a', {class: 'srf', href: 'https://www.srf.ch/play/tv'}, 'SRF'),
+					', ',
 					html('a', {class: 'swr', href: 'http://swrmediathek.de'}, 'SWR'),
 					' und ',
 					html('a', {class: 'dw', href: 'http://www.dw.com/de/media-center/alle-inhalte/s-100814'}, 'Deutsche Welle'),

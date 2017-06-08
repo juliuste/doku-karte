@@ -7,6 +7,7 @@ const networks = {
 	arte: 'ARTE',
 	daserste: 'Das Erste',
 	swr: 'SWR',
+	srf: 'SRF',
 	mdr: 'MDR',
 	dw: 'Deutsche Welle'
 }
