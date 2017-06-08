@@ -10,3 +10,4 @@ config/*
 !config/default.json
 
 assets/data.ndjson
+*.log
