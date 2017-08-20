@@ -5,10 +5,10 @@ rsync -rav --delete \
 	--exclude node_modules \
 	--exclude '*.log' \
 	--exclude 'assets/data.ndjson' \
-	. 'dokukarte:~/dokukarte/'
+	. 'enceladus:~/doku-karte/'
 
-ssh dokukarte "\
-cd ~/dokukarte
+ssh enceladus "\
+cd ~/doku-karte
 npm i
 npm update
 ./update
